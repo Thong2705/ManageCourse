@@ -29,9 +29,7 @@ This Online Course Management API, built with Java Spring Boot, provides a compr
 
 ![Database Schema](./image/database.png)
 
-## Getting Started
-
-### Prerequisites
+## Prerequisites
 
 - Java 21
 - PostgreSQL
