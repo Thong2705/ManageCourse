@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>Login</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <a
+      class="px-3 py-2 w-1/2 font-semibold rounded-lg login-with-google-btn text-center"
+      th:href="@{/oauth2/authorization/google}"
+    >
+      Sign in with Google</a>
+      <p></p>
+    <a th:href="@{/login/forgot-password}">Forgot password</a>
+  </body>
+</html>

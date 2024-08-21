@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <script>
+      function setFormAction(action) {
+        document.getElementById("registerForm").action = action;
+      }
+
+      function validatePasswords(event) {
+        var password = document.getElementById("password").value;
+        var confirmPassword = document.getElementById("confirmPassword").value;
+        var message = document.getElementById("message");
+
+        if (password !== confirmPassword) {
+          message.textContent = "Passwords do not match.";
+          event.preventDefault();
+        } else {
+          message.textContent = "";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <form id="registerForm" method="post" onsubmit="validatePasswords(event)">
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" th:value="${name}" readonly />
+      </div>
+      <br /><br />
+      <div>
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          th:value="${email}"
+          readonly
+        />
+      </div>
+      <br /><br />
+
+      <label for="password">Password:</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        required
+      /><br /><br />
+
+      <label for="confirmPassword">Confirm Password:</label>
+      <input
+        type="password"
+        id="confirmPassword"
+        name="confirmPassword"
+        required
+      /><br /><br />
+
+      <span id="message" style="color: red"></span><br /><br />
+
+      <label for="address">Address:</label>
+      <input type="text" id="address" name="address" required /><br /><br />
+
+      <label for="phone">Phone:</label>
+      <input type="text" id="phone" name="phone" required /><br /><br />
+
+      <button
+        type="submit"
+        onclick="setFormAction('/register_google/register_student');"
+      >
+        Register as Student
+      </button>
+      <button
+        type="submit"
+        onclick="setFormAction('/register_google/register_instructor');"
+      >
+        Register as Instructor
+      </button>
+    </form>
+  </body>
+</html>
