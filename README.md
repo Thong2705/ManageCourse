@@ -27,11 +27,7 @@ This Online Course Management API, built with Java Spring Boot, provides a compr
 
 ## Database Schema
 
-*(Insert database schema diagram here)*
-
-![Database Schema](.image/database.png)
-
-*(Replace the above line with the actual path to your database schema image)*
+![Database Schema](./image/database.png)
 
 ## Getting Started
 
